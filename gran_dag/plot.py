@@ -86,11 +86,11 @@ def plot_weighted_adjacency(weighted_adjacency, gt_adjacency, exp_path, name="ab
     if plotting_callback is not None:
         plotting_callback("weighted_adjacency", fig)
     fig.savefig(os.path.join(exp_path, name + '.png'))
-    fig.clf()
+    fig.close()
 
 
 def plot_adjacency(adjacency, gt_adjacency, exp_path, name=''):
-    plt.clf()
+    
     f, (ax1, ax2, ax3) = plt.subplots(ncols=3, nrows=1)
     sns.heatmap(adjacency, ax=ax1, cbar=False, vmin=-1, vmax=1, cmap="Blues_r", xticklabels=False, yticklabels=False)
     sns.heatmap(gt_adjacency, ax=ax2, cbar=False, vmin=-1, vmax=1, cmap="Blues_r", xticklabels=False, yticklabels=False)
@@ -106,6 +106,7 @@ def plot_adjacency(adjacency, gt_adjacency, exp_path, name=''):
     ax3.set_aspect('equal', adjustable='box')
 
     plt.savefig(os.path.join(exp_path, 'adjacency' + name + '.png'))
+    plt.close()
 
 
 def plot_learning_curves(not_nlls, aug_lagrangians, aug_lagrangians_ma, aug_lagrangians_val, nlls, nlls_val, exp_path):
@@ -127,7 +128,7 @@ def plot_learning_curves(not_nlls, aug_lagrangians, aug_lagrangians_ma, aug_lagr
 
     fig.tight_layout()
     fig.savefig(os.path.join(exp_path, 'learning-curves.pdf'), bbox_inches="tight", padding=0)
-    fig.clf()
+    plt.close()
 
 def plot_learning_curves_retrain(losses, losses_val, nlls, nlls_val, exp_path):
     fig, ax1 = plt.subplots()
@@ -143,4 +144,4 @@ def plot_learning_curves_retrain(losses, losses_val, nlls, nlls_val, exp_path):
 
     fig.tight_layout()
     fig.savefig(os.path.join(exp_path, 'learning-curves.pdf'), bbox_inches="tight", padding=0)
-    fig.clf()
+    plt.close()
