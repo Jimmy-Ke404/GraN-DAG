@@ -86,7 +86,7 @@ def plot_weighted_adjacency(weighted_adjacency, gt_adjacency, exp_path, name="ab
     if plotting_callback is not None:
         plotting_callback("weighted_adjacency", fig)
     fig.savefig(os.path.join(exp_path, name + '.png'))
-    fig.close()
+    plt.close()
 
 
 def plot_adjacency(adjacency, gt_adjacency, exp_path, name=''):
