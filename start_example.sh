@@ -4,7 +4,7 @@
 
 CODE_PATH="/home/zemian/Projects/10708/project/GranDAG/GraN-DAG-master"  # path to the code root
 EXP_PATH="/home/zemian/Projects/10708/project/GranDAG/experiments/"  # this folder will contain all artifacts saved by the program
-DATA_PATH="/home/zemian/Projects/10708/project/GranDAG/GraN-DAG-master/data/data_p10_e10_n1000_GP/"  # this should contain (data1.npy, DAG1.npy, CPDAG1.npy), (data2.npy, DAG2.npy, CPDAG2.npy), ...
+DATA_PATH="/home/zemian/Projects/10708/project/GranDAG/GraN-DAG-master/data/data_to_use/data_p10_e10_n1000_GP/"  # this should contain (data1.npy, DAG1.npy, CPDAG1.npy), (data2.npy, DAG2.npy, CPDAG2.npy), ...
 MODEL="NonLinGaussANM"  # or NonLinGauss
 DATA_INDEX=1  # Choose which dataset to use. Program will use (data${DATA_INDEX}.npy, DAG${DATA_INDEX}.npy, CPDAG${DATA_INDEX}.npy)
 NUM_VARS=10  # should match the data provided
